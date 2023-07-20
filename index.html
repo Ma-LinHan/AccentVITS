@@ -6,7 +6,7 @@
 
 
 
-  <title>To be edit!</title></title>
+  <title>Accent-VITS</title></title>
   <meta name="generator" content="Jekyll v3.9.0">
   <meta property="og:title" content="TODO: title">
   <meta property="og:locale" content="en_US">
@@ -28,35 +28,20 @@
 
   <section class="main-content">
     <h1 id="">
-      <center>METTS: Multilingual Emotional Text-to-Speech by Cross-speaker and Cross-lingual Emotion Transfer</center>
+      <center>Accent-VITS: accent transfer for end-to-end TTS</center>
     </h1>
 
 
-    <h2>0. Contents</h2>
-    <ol>
-      <li><a href="#abstract">Abstract</a></li>
-      <li><a href="#transfer">Examples of target speaker</a></li>
-      <li><a href="#prediction">Synthetic speech of benchmark systems</a></li>
-      <li><a href="#control">Synthetic speech of ablation studies</a></li>
-      <li><a href="#control2">Synthetic speech of different numbers of quantization centers</a></li>
-    </ol>
-
+    
     <br><br>
     <h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
-    <p> Previous multilingual text-to-speech (TTS) approaches have considered leveraging monolingual speaker data to
-      enable cross-lingual speech synthesis for monolingual speakers. However, such data-efficient approaches have
-      ignored synthesizing emotional aspects of speech due to the challenges of cross-speaker cross-lingual emotion
-      transfer -- the heavy entanglement of speaker timbre, emotion and language factors in the speech signal will make
-      a system to produce cross-lingual synthetic speech with unwanted foreign accent and weak emotion expressiveness.
-      This paper proposes Multilingual Emotional TTS (METTS) model to mitigate these problems, realizing both
-      cross-speaker and cross-lingual emotion transfer. METTS takes DelightfulTTS as the backbone model and proposes the
-      following designs. First, to address the foreign accent problem, METTS introduces multi-scale emotion
-      modeling to disentangle speech prosody into coarse-grained and fine-grained scales, producing language-agnostic
-      and language-specific emotion representations, respectively. Second, as a pre-processing step, formant shift based
-      information perturbation is applied to the reference signal for better disentanglement of speaker timbre, language
-      and emotion. Third, a vector quantization based emotion matcher is designed for cross-lingual reference selection, leading
-      to decent emotion expressiveness in cross-lingual synthetic speech. Extensive experiments demonstrate the good
-      design of METTS.
+    <p> Accent transfer aims to transfer an accent from a source speaker to synthetic speech in the target speaker's voice. The main challenge is how to 
+      effectively disentangle speaker timbre and accent which are entangled in speech. This paper presents a VITS-based end-to-end accent transfer model
+      named Accent-VITS. Based on the main structure of VITS, Accent-VITS makes substantial improvements to enable effective and stable accent transfer. 
+      We leverage a hierarchical CVAE structure to model accent pronunciation information and acoustic features, respectively, using bottleneck features 
+      and mel spectrums as constraints. Moreover, the text-to-wave mapping in VITS is decomposed into text-to-accent and accent-to-wave mappings in Accent-VITS.
+      In this way, the disentanglement of accent and speaker timbre becomes be more stable and effective. Experiments on multi-accent and Mandarin datasets 
+      show that Accent-VITS achieves higher speaker similarity, accent similarity and speech naturalness as compared with a strong baseline.
     </p>
     <center><img src='fig/pipeline.drawio.png'></center>
     <div align="center"><b>Fig.1</b> The architecture of METTS.</div>
