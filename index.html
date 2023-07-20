@@ -49,6 +49,7 @@
       speaker timbre becomes be more stable and effective. Experiments on multi-accent and Mandarin datasets show that Accent-VITS achieves higher speaker similarity, accent similarity and speech naturalness 
       as compared with a strong baseline.
     </p>
+    <br>
     <center><img src='fig/asru1.png'></center>
     <div align="center"><b>Fig.1</b> The architecture of Accent-VITS.</div>
 
@@ -56,18 +57,17 @@
 
     <h2>2. Dataset<a name="Dataset"></a>
     </h2>
+
+    <h3>High-quality unaccented dataset -- DB1 (Standard Mandarin)</h3>
    
 
     <table>
       <thead>
         <tr>
-          <th style="text-align: center"><strong>Speaker</strong></th>
+          <th style="text-align: center"><strong>Text</strong></th>
           <th style="text-align: center"><strong>Example1</strong></th>
           <th style="text-align: center"><strong>Example2</strong></th>
           <th style="text-align: center"><strong>Example3</strong></th>
-          <th style="text-align: center"><strong>Example4</strong></th>
-          <th style="text-align: center"><strong>Example5</strong></th>
-          <th style="text-align: center"><strong>Example6</strong></th>
         </tr>
       </thead>
       <tbody>
@@ -75,39 +75,122 @@
           <td style="text-align: center; word-break: keep-all; white-space: nowrap;" rowspan=2>CN_SPK</td>
         </tr>
         <tr>
-          <td style="text-align: left"><audio src="subjective/ref_emo/03_10.wav" controls="" preload=""></audio>
+          <td style="text-align: left"><audio src="demos/db1/03_10.wav" controls="" preload=""></audio>
           </td>
-          <td style="text-align: left"><audio src="subjective/ref_emo/03_11.wav" controls="" preload=""></audio>
+          <td style="text-align: left"><audio src="demos/db1/03_11.wav" controls="" preload=""></audio>
           </td>
-          <td style="text-align: left"><audio src="subjective/ref_emo/03_17.wav" controls="" preload=""></audio>
-          </td>
-          <td style="text-align: left"><audio src="subjective/ref_emo/03_19.wav" controls="" preload=""></audio>
-          </td>
-          <td style="text-align: left"><audio src="subjective/ref_emo/03_3.wav" controls="" preload=""></audio></td>
-          <td style="text-align: left"><audio src="subjective/ref_emo/03_7.wav" controls="" preload=""></audio>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: center; word-break: keep-all; white-space: nowrap;" rowspan=2>EN_SPK</td>
-        </tr>
-        <tr>
-          <td style="text-align: left"><audio src="subjective/ref_spk5/03_10.wav" controls="" preload=""></audio>
-          </td>
-          <td style="text-align: left"><audio src="subjective/supplement/000001.wav" controls="" preload=""></audio>
-          </td>
-          <td style="text-align: left"><audio src="subjective/supplement/shannon_eng_raw_000010.wav" controls=""
-              preload=""></audio>
-          </td>
-          <td style="text-align: left"><audio src="subjective/supplement/shannon_eng_raw_000145.wav" controls=""
-              preload=""></audio>
-          </td>
-          <td style="text-align: left"><audio src="subjective/supplement/shannon_eng_raw_005052.wav" controls=""
-              preload=""></audio></td>
-          <td style="text-align: left"><audio src="subjective/supplement/shannon_eng_raw_005302.wav" controls=""
-              preload=""></audio>
+          <td style="text-align: left"><audio src="demos/db1/03_17.wav" controls="" preload=""></audio>
           </td>
         </tr>
 
+      </tbody>
+    </table>
+
+
+    <h3>Accented dataset</h3>
+        <h4>Dongbei (Northeast China):</h4>
+        <table>
+      <thead>
+        <tr>
+          <th style="text-align: center"><strong>Text</strong></th>
+          <th style="text-align: center"><strong>Example1</strong></th>
+          <th style="text-align: center"><strong>Example2</strong></th>
+          <th style="text-align: center"><strong>Example3</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; word-break: keep-all; white-space: nowrap;" rowspan=2>CN_SPK</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><audio src="demos/db1/03_10.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_11.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_17.wav" controls="" preload=""></audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    
+        <h4>Henan:</h4>
+        <table>
+      <thead>
+        <tr>
+          <th style="text-align: center"><strong>Text</strong></th>
+          <th style="text-align: center"><strong>Example1</strong></th>
+          <th style="text-align: center"><strong>Example2</strong></th>
+          <th style="text-align: center"><strong>Example3</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; word-break: keep-all; white-space: nowrap;" rowspan=2>CN_SPK</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><audio src="demos/db1/03_10.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_11.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_17.wav" controls="" preload=""></audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    
+        <h4>Shanghai:</h4>
+        <table>
+      <thead>
+        <tr>
+          <th style="text-align: center"><strong>Text</strong></th>
+          <th style="text-align: center"><strong>Example1</strong></th>
+          <th style="text-align: center"><strong>Example2</strong></th>
+          <th style="text-align: center"><strong>Example3</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; word-break: keep-all; white-space: nowrap;" rowspan=2>CN_SPK</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><audio src="demos/db1/03_10.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_11.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_17.wav" controls="" preload=""></audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    
+        <h4>Sichuan:</h4>
+        <table>
+      <thead>
+        <tr>
+          <th style="text-align: center"><strong>Text</strong></th>
+          <th style="text-align: center"><strong>Example1</strong></th>
+          <th style="text-align: center"><strong>Example2</strong></th>
+          <th style="text-align: center"><strong>Example3</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; word-break: keep-all; white-space: nowrap;" rowspan=2>CN_SPK</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><audio src="demos/db1/03_10.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_11.wav" controls="" preload=""></audio>
+          </td>
+          <td style="text-align: left"><audio src="demos/db1/03_17.wav" controls="" preload=""></audio>
+          </td>
+        </tr>
 
       </tbody>
     </table>
